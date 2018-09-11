@@ -718,8 +718,8 @@ bottomframe.pack()
 
 Label(topframe,background="black",fg="white", text="Programa:", width=46, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 Label(topframe,background="black",fg="white", text="Object code / disassembly:", width=28, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
-Label(topframe,background="black",fg="white", text="Symbol table:", width=22, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
-Label(topframe,background="black",fg="white", text="Registers:", width=16, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
+Label(topframe,background="black",fg="white", text="Tabela de Simbolos:", width=22, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
+Label(topframe,background="black",fg="white", text="Registradores:", width=16, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 
 asmxscrollbar = Scrollbar(middleframe, orient=HORIZONTAL)
 asmyscrollbar = Scrollbar(middleframe)
@@ -749,7 +749,7 @@ for i in range(9):
 for i in range(9) :
 	Label(middleframe, textvariable=root.reg_label[i], width=25, font=('Courier', 11), background="black", fg="white").pack()
 
-Label(middleframe, text="\nControl:\n", width=25, font=('Courier', 11, 'bold'), background="black", fg="white").pack()
+Label(middleframe, text="\nControles:\n", width=25, font=('Courier', 11, 'bold'), background="black", fg="white").pack()
 
 root.cycle = StringVar()
 Label(middleframe, textvariable=root.cycle, width=25, font=('Courier', 11), background="black").pack()
