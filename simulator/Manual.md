@@ -30,3 +30,18 @@
 1) Resete o programa ou inicie ele com o botão Passo-A-Passo
 2) Deve clicar no botão para mostrar cada passo-a-passo
 3) se deseja parar o programa, vá no botão machine e selecione Stop
+
+**Comandos:**
+
+* Botão Compilar: Compila o programa Assembly
+* Botão Iniciar: Inicia o programa compilado
+* Botão Passo-a-Passo: Mostra passo a passo o programa
+* Botão Limpar terminal: Limpa o terminal onde sai o programa
+* Botão Resetar: Reinicia para iniciar o programa de novo
+* Sistema/Parar: para o programa rodando
+* Programas/Sair: encerra o programa
+* Programas/Novo: começa um novo programa
+* Programas/Carregar: carrega um programa salvo
+* Programas/Salvar como... : salva o programa escrito agora
+* Programas/Compilar: compila o programa escrito
+* Programas/Carregar Arquivo adicional
