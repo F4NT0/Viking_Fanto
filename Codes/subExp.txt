@@ -1,0 +1,28 @@
+EXPLICAÇÃO DO PROGRAMA SUB
+
+COMANDOS UTILIZADOS:
+	
+	ldw registradorDestino,variavel = load word 
+	sub registradorDestino,regValor1,regValor1 = subtract 
+        ldi registradorDestino,valorConstante = load immediate
+        stw registradorDestino,registradorOrigem = store word
+        hcf = halt and catch fire
+ 
+
+ LDW = Carrega uma informação de uma variável em um registrador definido
+    ldw r1,a -> pega a informação da variavel a e armazena no registrador 1
+    ldw r2,b -> pega a informação da variavel b e armazena no registrador 2
+
+ 
+ SUB = Pega os valores de dois registradores e armazena o resultado em um terceiro
+registrador.
+    sub r3,r1,r2 -> subtrai o valor armazenado no r1 com o r2 e armazena o resultado no registrador 3
+
+ LDI = Pega um valor e carrega em um registrador especifico, neste caso utilizando a a constante 0xf002 que é usado para que seja carregado uma saida que é um inteiro
+     ldi at,0xf002 -> o at é o apelido do registrador zero
+
+ STW = Armazena a informação de um registrador de origem em um registrador de destino, neste caso é usado para que o comando ldi possa pegar o valor de dentro do registrador 3 e imprimir na tela
+
+ hcf = encerra a simulação do código, como se fosse um end em python ou break em java
+
+

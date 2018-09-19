@@ -45,3 +45,13 @@
 * Programas/Salvar como... : salva o programa escrito agora
 * Programas/Compilar: compila o programa escrito
 * Programas/Carregar Arquivo adicional
+
+
+
+
+
+
+* Comandos de ASSEMBLY para usar no viking
+
+AND,OR,XOR  r1,r2,r3 = faz operação lógica com r2 e r3 e salva no r1
+SLT (SET IF LESS THAN)

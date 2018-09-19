@@ -1,0 +1,14 @@
+;	PROGRAMA DE SUBTRAÇÃO DE DOIS NUMEROS
+;	O RESULTADO É IMPRESSO NO TERMINAL DO VIKINGSIM
+;	VERIFICAR A SEÇÃO 4.2.1 DO MANUAL DO VIKING(MAPA DE MEMÓRIA)
+
+main
+	ldw	r1,a
+	ldw	r2,b
+	sub	r3,r1,r2
+	ldi	at,0xf002
+	stw	r3,at
+	hcf
+
+a	123
+b	456
