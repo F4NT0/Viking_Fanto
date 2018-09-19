@@ -1,0 +1,43 @@
+EXPLICAÇÃO DO PROGRAMA MULT
+
+	Este programa faz uma multiplicação por somas sucessivas, onde vai sendo acumulado
+ o valor da variavel a em res a cada b existente, a cada uso da variavel b ele é decrementado 
+ 1 a cada uso até o b chegar em zero, o resultado final é armazenado na variavel res e impressa
+ no terminal
+
+
+
+COMANDOS UTILIZADOS
+
+	ldw registradorDestino, variavel = load word
+        xor registradorDestino, registradorPesquisado1, registradorPesquisado2 = xor
+ 	add registradorDestino, registradorPesquisado1, registradorPesquisado2 = add
+	sub registradorDestino, constante = subtração
+        bnz registradorTestado, controleVerificado = branch if not equal zero
+        stw registradorDestino,registradorOrigem = store word
+        ldi registradorDestino, valor constante = load immediate
+        hcf = halt and catch fire
+
+	LDW = Load Word, armazena o valor de uma variavel em um registrador
+		ex: ldw r1,a -> armazena o valor da variavel a em r1
+
+	XOR = Realiza a diferença entre dois valores em registradores e armazena em um registrador destino.
+		ex: xor r3,r3,r3 -> verifica o valor em r3 com ele mesmo e armazena em r3
+
+	ADD = soma dois valores armazenados em dois registradores e armazena no registrador destino
+		ex: add r3,r1,r3 -> soma o valor armazenado no registrador 1 com o do registrador 3 e armazena no registrador 3
+
+	SUB = subtrai o valor de um registrador utilizando neste caso uma constante
+		ex: sub r2,1 -> subtrai 1 do valor armazenado no registrador 2
+		
+	BNZ = verifica se o registrador possui o valor zero, se ele não tiver em zero
+ ele começa de novo toda a parte do código existente naquela parte de código
+		ex: bnz r2,rep -> verifica se é zero e se não for ele inicia o rep de novo
+
+	STW = armazena o valor do registrador r3 na variavel res
+		ex: stw r3,res -> o valor calculado em r3 ira ser armazenado em res
+
+	LDI = pega a constante 0xf002, que serve para fazer ter a saida de valores no terminal
+		ex: ldi at,0xf002 -> armazena o comando no registrador 0
+
+	HCF = é o break do código
