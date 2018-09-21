@@ -1,0 +1,24 @@
+;	if(a == b)
+;	1 se a == b
+;	0 se a != b
+main
+	ldw	r1,a
+	ldw	r2,b
+	sub	r3,r1,r2
+	bez	r3,if
+else
+	ldw	r4,c
+	ldi	at,0xf002
+	stw	r4,at
+	hcf
+if
+	ldw	r4,d
+	ldi	at,0xf002
+	stw	r4,at
+	hcf
+
+a	2
+b	2
+c	0
+d	1
+	

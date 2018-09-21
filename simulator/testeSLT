@@ -1,0 +1,13 @@
+;	TESTE DO SLT
+;	SE O PRIMEIRO < SEGUNDO = 1
+;	SE O PRIMEIRO > SEGUNDO = 0
+main
+	ldw	r1,a
+	ldw	r2,b
+	slt	r3,r1,r2
+	ldi	at,0xf002
+	stw	r3,at
+	hcf
+
+a	2
+b	4
