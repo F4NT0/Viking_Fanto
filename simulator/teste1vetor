@@ -1,0 +1,12 @@
+main
+	ldi	r4,vet
+	add	r4,3
+	add	r4,3
+	ldi	r3,3
+	stw	r3,r4
+	ldw	r2,r4
+	ldi	at,0xf002
+	stw	r2,at
+	hcf
+
+vet	0 0 0 0 0

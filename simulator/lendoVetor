@@ -1,0 +1,26 @@
+main
+; CARREGANDO VETOR NO R4
+; CARREGANDO O CONTADOR EM R1
+; ARMAZENANDO O TAMANHO DO VETOR
+	ldi	r4,vet
+	ldi	r1,0
+	ldi	r5,5
+while
+; FAZENDO O CALCULO DE DISTANCIA	
+	add	r4,r1
+	add	r4,r1
+; ADICIONANDO O VALOR EM R2 E IMPRIMINDO
+	ldw	r2,r4
+	ldi	at,0xf002
+	stw	r2,at
+; INCREMENTANDO O CONTADOR
+	add	r1,1
+; FAZENDO UM >= PARA VER SE CHEGOU NO TAMANHO
+	slt	r3,r1,r5
+	bnz	r3,while
+	bez	r3,end
+; FINALIZANDO O PROGRAMA
+end
+	hcf
+
+vet	0 1 2 3 4 5
