@@ -1,0 +1,22 @@
+;	PROGRAMA DE EXPLICAÇÃO DE COMO FAZER UMA PILHA
+;	PUSH: ADICIONAR VALORES NA PILHA
+;	POP: RETIRAR VALORES DA PILHA
+;	O PRIMEIRO VALOR COLOCADO É O ULTIMO QUE FICA NA PILHA
+;  TODA VEZ QUE COLOCAMOS UM VALOR NA PILHA, TEMOS QUE SUBTRAIR 2 DO VALOR DO 
+;  APONTADOR DA PILHA(sp QUE É O r7) como mostrado no inicio do código
+main
+;	PUSH	
+	ldi	r1,1
+	sub	sp,2
+	stw	r1,sp
+
+	ldi	r2,2
+	sub	sp,2
+	stw	r2,sp
+;	POP
+	ldw	r1,sp
+	add	sp,2
+	
+	ldw	r2,sp
+	add	sp,2
+	hcf
