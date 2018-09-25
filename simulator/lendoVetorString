@@ -1,18 +1,12 @@
 main
 	ldi	r1,hello
-	ldi	r3,size
-	ldi	r4,fim
-while
+char
 	ldb	r2,r1
 	stw	r2,0xf000
 	add	r1,1
-	sub	r5,r3,r4
-	bez	r5,end
-	bnz	r5,while
-end
+	bnz	r1,char
 	hcf
 	
 
 hello	"ESCREVENDO NO TERMINAL"
-size	22
-fim	0
+

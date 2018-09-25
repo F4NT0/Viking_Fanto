@@ -1,0 +1,18 @@
+main	
+	ldi	r4,string
+	ldi	r5,size
+	ldi	r6,cont
+loop
+	add	r4,r5
+	ldb	r1,r4
+	add	r4,r6
+	ldb	r2,r4
+	sub	r3,r1,r2
+
+string	"ana"
+size	3
+cont	0
+yes	1
+nope	0
+	
+	
