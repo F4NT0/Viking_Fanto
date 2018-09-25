@@ -1,0 +1,11 @@
+; teste de pilha
+main
+	ldi	r1,1
+	sub	sp,2
+	stw	r1,sp
+	ldi	r2,2
+	sub	sp,2
+	stw	r2,sp
+	stw	r1,0xf002
+	hcf
+
