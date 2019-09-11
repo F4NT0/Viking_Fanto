@@ -723,20 +723,20 @@ Label(topframe,background="black",fg="white", text="Registradores:", width=16, f
 
 asmxscrollbar = Scrollbar(middleframe, orient=HORIZONTAL)
 asmyscrollbar = Scrollbar(middleframe)
-textasm = Text(middleframe, wrap=NONE, xscrollcommand=asmxscrollbar.set, yscrollcommand=asmyscrollbar.set,insertbackground="green",height=24, width=44, font=('Courier', 11),background="black",fg="green")
+textasm = Text(middleframe, wrap=NONE, xscrollcommand=asmxscrollbar.set, yscrollcommand=asmyscrollbar.set,insertbackground="lightgreen",height=24, width=44, font=('Courier', 11),background="black",fg="lightgreen")
 asmxscrollbar.pack(side=BOTTOM, fill=X)
 textasm.pack(side=LEFT, fill=BOTH)
 asmyscrollbar.pack(side=LEFT, fill=Y)
 asmxscrollbar.config(command=textasm.xview)
 asmyscrollbar.config(command=textasm.yview)
 
-textdump = Listbox(middleframe, height=24, width=26, font=('Courier', 11),background="black", fg="green")
+textdump = Listbox(middleframe, height=24, width=26, font=('Courier', 11),background="black", fg="lightblue")
 textdumpscroll = Scrollbar(middleframe, command=textdump.yview)
 textdump.configure(yscrollcommand=textdumpscroll.set)
 textdump.pack(side=LEFT, fill=BOTH)
 textdumpscroll.pack(side=LEFT, fill=Y)
 
-textsym = Listbox(middleframe,height=24, width=18, font=('Courier', 11),background="black", fg="green")
+textsym = Listbox(middleframe,height=24, width=18, font=('Courier', 11),background="black", fg="magenta")
 textsymscroll = Scrollbar(middleframe, command=textsym.yview)
 textsym.configure(yscrollcommand=textsymscroll.set)
 textsym.pack(side=LEFT, fill=BOTH)
@@ -752,7 +752,7 @@ for i in range(9) :
 Label(middleframe, text="\nControles:\n", width=25, font=('Courier', 11, 'bold'), background="black", fg="white").pack()
 
 root.cycle = StringVar()
-Label(middleframe, textvariable=root.cycle, width=25, font=('Courier', 11), background="black").pack()
+Label(middleframe, textvariable=root.cycle, width=25, font=('Courier', 11), background="black", fg="white").pack()
 
 refresh_regs()
 
@@ -762,7 +762,7 @@ Button(middleframe, text='Iniciar', width=14, command=run, background="black", f
 Button(middleframe, text='Passo-A-Passo', width=13, command=step, background="black", fg="white").pack()
 Button(middleframe, text='Limpar Terminal', width=14, command=clear_term, background="black", fg="white").pack()
 
-out = Text(bottomframe, height=14, width=122, font=('Courier', 10), background="black", fg="green")
+out = Text(bottomframe, height=14, width=122, font=('Courier', 10), background="black", fg="yellow")
 outscroll = Scrollbar(bottomframe, command=out.yview)
 out.configure(yscrollcommand=outscroll.set)
 out.pack(side=LEFT, fill=BOTH)
