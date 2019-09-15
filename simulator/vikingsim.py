@@ -682,6 +682,7 @@ def memdump() :
 
 root = Tk()
 menu = Menu(root, background="#171717", fg="white")
+root.title("VIKING 16 BITS")
 root.geometry("2000x900")
 root.resizable(4000,4000)
 root.config(bg="#171717",menu=menu)
@@ -716,14 +717,14 @@ middleframe.pack()
 bottomframe = Frame(root,background="#171717")
 bottomframe.pack()
 
-Label(topframe,background="#171717",fg="white", text="Programa:", width=46, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
+Label(topframe,background="#171717",fg="white", text="Programa:", width=70, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 Label(topframe,background="#171717",fg="white", text="Object code / disassembly:", width=28, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 Label(topframe,background="#171717",fg="white", text="Tabela de Simbolos:", width=22, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 Label(topframe,background="#171717",fg="white", text="Registradores:", width=16, font=('Courier', 11, 'bold'), anchor=W).pack(side=LEFT)
 
 asmxscrollbar = Scrollbar(middleframe, orient=HORIZONTAL)
 asmyscrollbar = Scrollbar(middleframe)
-textasm = Text(middleframe, wrap=NONE, xscrollcommand=asmxscrollbar.set, yscrollcommand=asmyscrollbar.set,insertbackground="lightgreen",height=24, width=44, font=('Courier', 11),background="#171717",fg="lightgreen")
+textasm = Text(middleframe, wrap=NONE, xscrollcommand=asmxscrollbar.set, yscrollcommand=asmyscrollbar.set,insertbackground="#2cb619",height=24, width=70, font=('Courier', 11),background="#171717",fg="lightgreen")
 asmxscrollbar.pack(side=BOTTOM, fill=X)
 textasm.pack(side=LEFT, fill=BOTH, expand=True)
 asmyscrollbar.pack(side=LEFT, fill=Y)
@@ -747,7 +748,7 @@ for i in range(9):
 	root.reg_label.append(StringVar())
 
 for i in range(9) :
-	Label(middleframe, textvariable=root.reg_label[i], width=25, font=('Courier', 11), background="#171717", fg="white").pack()
+	Label(middleframe, textvariable=root.reg_label[i], width=25, font=('Courier', 11), background="#171717", fg="#ddea06").pack()
 
 Label(middleframe, text="\nControles:\n", width=25, font=('Courier', 11, 'bold'), background="#171717", fg="white").pack()
 
@@ -756,13 +757,13 @@ Label(middleframe, textvariable=root.cycle, width=25, font=('Courier', 11), back
 
 refresh_regs()
 
-Button(middleframe, text='Resetar', width=14, command=reset, background="#171717", fg="white").pack()
-Button(middleframe, text='Compilar', width=14, command=assembler, background="#171717", fg="white").pack()
-Button(middleframe, text='Iniciar', width=14, command=run, background="#171717", fg="white").pack()
-Button(middleframe, text='Passo-A-Passo', width=13, command=step, background="#171717", fg="white").pack()
-Button(middleframe, text='Limpar Terminal', width=14, command=clear_term, background="#171717", fg="white").pack()
+Button(middleframe, text='Resetar', width=14, command=reset, background="#8217bb", fg="white").pack()
+Button(middleframe, text='Compilar', width=14, command=assembler, background="#8217bb", fg="white").pack()
+Button(middleframe, text='Iniciar', width=14, command=run, background="#8217bb", fg="white").pack()
+Button(middleframe, text='Passo-A-Passo', width=14, command=step, background="#8217bb", fg="white").pack()
+Button(middleframe, text='Limpar Terminal', width=14, command=clear_term, background="#8217bb", fg="white").pack()
 
-out = Text(bottomframe, height=14, width=140, font=('Courier', 10), background="#171717", fg="yellow")
+out = Text(bottomframe, height=14, width=160, font=('Courier', 10), background="#171717", fg="yellow")
 outscroll = Scrollbar(bottomframe, command=out.yview)
 out.configure(yscrollcommand=outscroll.set)
 out.pack(side=LEFT, fill=BOTH, expand=True)
