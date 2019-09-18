@@ -1,0 +1,15 @@
+main
+	ldi r1,5
+	xor r2,r2,r2
+rep
+	slt r3,r1,r2
+	bnz r3,end
+	ldw r4,s
+	add r4,3
+	stw r4,s
+	sub r1,1
+	bnz r7,rep
+end
+	hcf
+
+s 0

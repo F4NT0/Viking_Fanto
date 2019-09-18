@@ -1,4 +1,4 @@
-;	MULTIPLICAÇÃO DE DOIS VALORES
+;	MULTIPLICACAO DE DOIS VALORES
 ;	VALORES IMPRESSOS NO TERMINAL
 ;	UTILIZA SOMAS SUCESSIVAS
 ;	stw r3,at faz com que o resultado saia no terminal
@@ -20,3 +20,4 @@ fim
 a	3
 b	5
 res	0
+

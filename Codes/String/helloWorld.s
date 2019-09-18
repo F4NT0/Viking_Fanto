@@ -1,7 +1,7 @@
 ;	PROGRAMA DE HELLO WORLD
-;	0xf000 É A FORMA DE IMPRIMIR LETRAS NO TERMINAL
+;	0xf000 E A FORMA DE IMPRIMIR LETRAS NO TERMINAL
 main
-	ldi	r1,0xf00
+	ldi	r1,0xf000
 	ldi	r2,str
 loop
 	ldb	r3,r2
@@ -11,3 +11,4 @@ loop
 	hcf
 
 str	"hello world!"
+

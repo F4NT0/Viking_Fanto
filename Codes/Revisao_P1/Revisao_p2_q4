@@ -1,0 +1,23 @@
+main
+	ldi r1,1
+	ldi r2,0
+	ldw r3,max
+repete
+	slt r4,r1,r3
+	bez r4,fim
+	ldi r5,v
+	add r5,r5,r1
+	add r5,r5,r1
+	ldw r2,r5
+	sub r5,2
+	ldw r4,r5
+	add r5,4
+	add r2,r2,r4
+	stw r2,r5
+	add r1,1
+	bnz r7,repete
+fim
+	hcf
+
+max 11
+v 0 1 0 0 0 0 0 0 0 0 0 0
